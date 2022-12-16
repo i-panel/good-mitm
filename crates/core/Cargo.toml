@@ -3,8 +3,8 @@ name = "video-mitm-core"
 version = "0.3.0"
 edition = "2021"
 description = "Use MITM technology to provide features like rewrite, redirect."
-homepage = "https://github.com/kontorol/good-mitm',
-repository = "https://github.com/kontorol/good-mitm',
+homepage = "https://github.com/kontorol/good-mitm"
+repository = "https://github.com/kontorol/good-mitm"
 license = "MIT"
 
 [dependencies]
