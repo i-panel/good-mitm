@@ -9,7 +9,7 @@ use rule::RuleHttpHandler;
 use rustls_pemfile as pemfile;
 use std::{fs, sync::Arc};
 
-use good_mitm::*;
+use video_mitm::*;
 
 #[derive(Parser)]
 #[clap(name = "Good Man in the Middle", version, about, author)]
