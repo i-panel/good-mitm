@@ -1,49 +1,49 @@
 # Good Man in the Middle
 
-[![GitHub stars](https://img.shields.io/github/stars/zu1k/good-mitm)](https://github.com/zu1k/good-mitm/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/zu1k/good-mitm)](https://github.com/zu1k/good-mitm/network)
-[![Release](https://img.shields.io/github/release/zu1k/good-mitm)](https://github.com/zu1k/good-mitm/releases)
-[![GitHub issues](https://img.shields.io/github/issues/zu1k/good-mitm)](https://github.com/zu1k/good-mitm/issues)
-[![Build](https://github.com/zu1k/good-mitm/actions/workflows/build-test.yml/badge.svg)](https://github.com/zu1k/good-mitm/actions/workflows/build-test.yml)
-[![GitHub license](https://img.shields.io/github/license/zu1k/good-mitm)](https://github.com/zu1k/good-mitm/blob/master/LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/kontorol/good-mitm',)](https://github.com/kontorol/good-mitm',/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/kontorol/good-mitm',)](https://github.com/kontorol/good-mitm',/network)
+[![Release](https://img.shields.io/github/release/kontorol/good-mitm',)](https://github.com/kontorol/good-mitm',/releases)
+[![GitHub issues](https://img.shields.io/github/issues/kontorol/good-mitm',)](https://github.com/kontorol/good-mitm',/issues)
+[![Build](https://github.com/kontorol/good-mitm',/actions/workflows/build-test.yml/badge.svg)](https://github.com/kontorol/good-mitm',/actions/workflows/build-test.yml)
+[![GitHub license](https://img.shields.io/github/license/kontorol/good-mitm',)](https://github.com/kontorol/good-mitm',/blob/master/LICENSE)
 [![Docs](https://img.shields.io/badge/docs-read-blue.svg?style=flat)](https://docs.mitm.plus)
 
-利用`MITM`技术实现请求和返回的`重写`、`重定向`、`阻断`等操作
+Use `MITM` technology to realize operations such as `rewriting`, `redirecting`, and `blocking` of requests and returns
 
-## 使用方法
+## Instructions
 
-这里仅介绍最基本的使用流程，具体使用方法和规则请查看[文档](https://docs.mitm.plus)
+Only the most basic usage process is introduced here, please refer to [documentation] for specific usage methods and rules(https://docs.mitm.plus)
 
-### 证书准备
+### certificate preparation
 
-由于`MITM`技术的需要，需要你生成并信任自己的根证书
+Due to `MITM` technology, you need to generate and trust your own root certificate
 
-#### 生成根证书
+#### generate root certificate
 
-出于安全考虑，请不要随意信任任何陌生人提供的根证书，你需要自己生成属于自己的根证书和私钥
-
-```shell
-good-mitm.exe genca
-```
-
-上面命令将会生成私钥和证书，文件将存储在`ca`文件夹下
-
-#### 信任证书
-
-你可以将根证书添加到操作系统或者浏览器的信任区中，根据你的需要自行选择
-
-### 代理
-
-启动Good-MITM，指定使用的规则文件或目录
+For security reasons, please do not trust any root certificate provided by strangers, you need to generate your own root certificate and private key
 
 ```shell
-good-mitm.exe run -r rules
+video-mitm.exe genca
 ```
 
-在浏览器或操作系统中使用Good-MITM提供的http代理：`http://127.0.0.1:34567`
+The above command will generate the private key and certificate, and the files will be stored in the `ca` folder
+
+#### trust certificate
+
+You can add the root certificate to the trusted zone of the operating system or browser, and choose according to your needs
+
+### Run
+
+Start Video-MITM, specify the rule file or directory to use
+
+```shell
+video-mitm.exe run -r rules
+```
+
+Use the http proxy provided by Video-MITM in the browser or operating system：`http://127.0.0.1:34567`
 
 ## License
 
-**Good-MITM** © [zu1k](https://github.com/zu1k), Released under the [MIT](./LICENSE) License.<br>
+**Video-MITM** © [zu1k](https://github.com/zu1k), Released under the [MIT](./LICENSE) License.<br>
 
 > Blog [zu1k.com](https://zu1k.com) · GitHub [@zu1k](https://github.com/zu1k) · Twitter [@zu1k_lv](https://twitter.com/zu1k_lv) · Telegram Channel [@peekfun](https://t.me/peekfun)

@@ -3,7 +3,7 @@
     domain: '126.com'
   action:
     modify-response:
-      body: "Hello 126.com, from Good-MITM"
+      body: "Hello 126.com, from Video-MITM"
 
 - name: "modify response body replace"
   filter:
@@ -12,7 +12,7 @@
     modify-response:
       body:
         origin: "网易首页"
-        new: "Good-MITM 首页"
+        new: "Video-MITM 首页"
 
 - name: "modify response body regex replace"
   filter:
@@ -23,7 +23,7 @@
           re: '(\d{4})'
           new: 'maybe $1'
 
-# access: https://www.baidu.com/s?wd=good-mitm
+# access: https://www.baidu.com/s?wd=video-mitm
 - name: "modify request url"
   filter:
     domain-suffix: 'baidu.com'

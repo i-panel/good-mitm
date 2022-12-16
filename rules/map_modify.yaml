@@ -11,7 +11,7 @@
     - modify-response:
         header:
           key: new-header-item
-          value: Good-MITM
+          value: Video-MITM
     - modify-response:
         header:
           key: server

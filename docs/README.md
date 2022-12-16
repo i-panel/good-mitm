@@ -1,9 +1,9 @@
 # Good Man in the Middle
 
-[![GitHub stars](https://img.shields.io/github/stars/zu1k/good-mitm)](https://github.com/zu1k/good-mitm/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/zu1k/good-mitm)](https://github.com/zu1k/good-mitm/network)
-[![GitHub issues](https://img.shields.io/github/issues/zu1k/good-mitm)](https://github.com/zu1k/good-mitm/issues)
-[![Build](https://github.com/zu1k/good-mitm/actions/workflows/build-test.yml/badge.svg)](https://github.com/zu1k/good-mitm/actions/workflows/build-test.yml)
-[![GitHub license](https://img.shields.io/github/license/zu1k/good-mitm)](https://github.com/zu1k/good-mitm/blob/master/LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/kontorol/good-mitm',ttps://github.com/zu1k/good-mitvideo-mitmers)
+[![GitHub forks](https://img.shields.io/github/forks/kontorol/good-mitm',ttps://github.com/zu1k/good-mitvideo-mitm)
+[![GitHub issues](https://img.shields.io/github/issues/kontorol/good-mitm',ttps://github.com/zu1k/good-mitvideo-mitm
+[![Build](https://github.com/kontorol/good-mitm',ions/workflows/build-test.yml/badge.svg)](https://github.com/zu1k/good-mitvideo-mitm/workflows/build-test.yml)
+[![GitHub license](https://img.shields.io/github/license/kontorol/good-mitm',ttps://github.com/zu1k/good-mitvideo-mitmster/LICENSE)
 
-使用MITM技术来提供 `rewrite`、`redirect`、`reject` 等功能
+Using MITM technology to provide `rewrite`、`redirect`、`reject` and other functions

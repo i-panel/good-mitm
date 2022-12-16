@@ -1,19 +1,19 @@
-# 证书准备
+# certificate preparation
 
-为了实现对HTTPS流量进行MITM，同时为了浏览器等不显示安全警告，需要生成并信任自签名CA证书
+In order to implement MITM for HTTPS traffic and to prevent browsers from displaying security warnings, a self-signed CA certificate needs to be generated and trusted
 
-## 生成CA证书
+## Generate CA certificate
 
-出于安全考虑，用户必须自己生成自己的CA证书，随意使用不可信的CA证书将会留下严重的安全隐患
+For security reasons, users must generate their own CA certificates. Random use of untrusted CA certificates will leave serious security risks
 
-经验丰富的用户可以自行使用OpenSSL进行相关操作，考虑到没有相关经验的用户，可以使用以下命令直接生成相关内容，生成的证书和私钥将存储在`ca`目录下
+Experienced users can use OpenSSL to perform related operations by themselves. Considering users without relevant experience, you can use the following commands to directly generate relevant content. The generated certificate and private key will be stored in the `ca` directory
 
 ```shell
-good-mitm.exe genca
+video-mitm.exe genca
 ```
 
-在浏览器使用了Good-MITM提供的代理后，通过访问 [http://cert.mitm.plus](http://cert.mitm.plus) 可以直接下载证书，这在给其他设备提供服务时非常有用
+After the browser uses the proxy provided by Video-MITM, by accessing [http://cert.mitm.plus](http://cert.mitm.plus) The certificate can be downloaded directly, which is very useful when providing services to other devices
 
-## 信任生成的证书
+## Trust the generated certificate
 
-你需要在浏览器或者操作系统中信任刚刚生成的证书，具体方法后期补充
+You need to trust the newly generated certificate in the browser or operating system, the specific method will be added later

@@ -1,10 +1,10 @@
-# Action 动作
+# Action
 
-`Action` 用来对请求或者返回进行操作
+`Action` Used to operate on requests or returns
 
-## 候选项
+## candidate
 
-`Action`目前包含以下选项：
+`Action` Currently includes the following options：
 
 - Reject
 - Redirect(String)
@@ -13,9 +13,9 @@
 - LogRes
 - LogReq
 
-### Reject 拒绝
+### Reject
 
-`reject`类型直接返回`502`，用来拒绝某些请求，可以用来拒绝追踪和广告
+`reject` type directly returns `502`，Used to reject certain requests, can be used to reject tracking and advertising
 
 ```yaml
 - name: "reject CSDN"
@@ -24,9 +24,9 @@
   action: reject
 ```
 
-### Redirect 重定向
+### Redirect 
 
-`redirect`类型直接返回`302`重定向
+`redirect`type directly returns`302`redirect
 
 ```yaml
 - name: "youtube-1"
@@ -36,21 +36,21 @@
     redirect: "$1$4"
 ```
 
-### ModifyRequest 修改请求
+### ModifyRequest 
 
-`modify-request`用来修改请求，具体修改规则见 [修改器](rule/modify.md)
+`modify-request` Used to modify the request, see the specific modification rules [modifier](rule/modify.md)
 
-### ModifyResponse 修改返回
+### ModifyResponse 
 
-`modify-response`用来修改返回，具体修改规则见 [修改器](rule/modify.md)
+`modify-response`It is used to modify the return, see the specific modification rules [modifier](rule/modify.md)
 
-### Log 记录日志
+### Log 
 
-`log-req` 用来记录请求，`log-res` 用来记录返回
+`log-req` used to log requests，`log-res` used to log back
 
-## 多个动作
+## Multiple Actions
 
-`actions`字段支持单个动作和多个动作，当需要执行多个动作时，应使用数组
+`actions`Field supports single action and multiple actions，Arrays should be used when multiple actions need to be performed
 
 ```yaml
 - name: "youtube-1"

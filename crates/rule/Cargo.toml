@@ -1,15 +1,15 @@
 [package]
-name = "good-mitm-rule"
+name = "video-mitm-rule"
 version = "0.2.0"
 edition = "2021"
 description = "Use MITM technology to provide features like rewrite, redirect."
-homepage = "https://github.com/zu1k/good-mitm"
-repository = "https://github.com/zu1k/good-mitm"
+homepage = "https://github.com/kontorol/good-mitm',
+repository = "https://github.com/kontorol/good-mitm',
 license = "MIT"
 
 [dependencies]
-mitm-core = { path = "../core", package = "good-mitm-core" }
-# mitm-core = { version = "0.2", package = "good-mitm-core" }
+mitm-core = { path = "../core", package = "video-mitm-core" }
+# mitm-core = { version = "0.2", package = "video-mitm-core" }
 
 anyhow = "1.0"
 async-trait = "0.1"

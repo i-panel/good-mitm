@@ -1,1 +1,1 @@
-# 配置规则
+# configuration rules

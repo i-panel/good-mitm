@@ -1,25 +1,25 @@
-# 修改器
+# modifier
 
-修改器用来执行修改操作，包括修改请求和修改返回
+Modifiers are used to perform modification operations，Includes modification requests and modification returns
 
-## 候选项
+## candidate
 
-根据需要修改的内容的位置，修改器分为以下几类：
+Depending on the location of the content that needs to be modified, the modifiers are divided into the following categories：
 
 - Header(MapModify)
 - Cookie(MapModify)
 - Body(TextModify)
 
-### TextModify 文本修改器
+### TextModify text modifier
 
-`TextModify` 主要对文本就行修改，目前支持两种方式：
+`TextModify` Mainly modify the text, and currently support two methods：
 
-- 直接设置文本内容
-- 普通替换或者正则替换
+- Set text content directly
+- Ordinary replacement or regex replacement
 
-#### 直接设置
+#### set directly
 
-对于plain类型直接设置，内容将被直接重置为指定文本
+For plain type direct settings, the content will be directly reset to the specified text
 
 ```yaml
 - name: "modify response body plain"
@@ -27,14 +27,14 @@
     domain: '126.com'
   action:
     modify-response:
-      body: "Hello 126.com, from Good-MITM"
+      body: "Hello 126.com, from Video-MITM"
 ```
 
-#### 替换
+#### replace
 
-替换支持简单替换和正则替换两种
+Replacement supports simple replacement and regular replacement
 
-##### 简单替换
+##### simple replacement
 
 ```yaml
 - name: "modify response body replace"
@@ -43,11 +43,11 @@
   action:
     modify-response:
       body:
-        origin: "网易首页"
-        new: "Good-MITM 首页"
+        origin: "Netease home page"
+        new: "Video-MITM front page"
 ```
 
-##### 正则替换
+##### regular replacement
 
 ```yaml
 - name: "modify response body regex replace"
@@ -61,15 +61,15 @@
 
 ```
 
-### MapModify 字典修改器
+### MapModify - Dictionary Modifier
 
-`MapModify` 字典修改器主要针对字典类型的位置进行修改，例如 `header` 和 `cookies`
+`MapModify` The dictionary modifier is mainly used to modify the location of the dictionary type, for example `header` and `cookies`
 
-`key` 代表字典的键，必须指定
+`key` Represents the key of the dictionary, which must be specified
 
-`value` 是 `TextModify` 类型，按照上文方法书写
+`value` It is `TextModify` type, written according to the above method
 
-如果指定 `remove` 为 `true`，则会删除该键值对
+If `remove` is specified as `true`, the key-value pair will be deleted
 
 ```yaml
 - name: "modify response header"
@@ -85,23 +85,23 @@
     - modify-response:
         header:
           key: new-header-item
-          value: Good-MITM
+          value: Video-MITM
     - modify-response:
         header:
           key: server
           remove: true
 ```
 
-### Header 修改
+### Header modify
 
-见 `MapModify` 部分方法
+See the `MapModify` section method
 
-### Cookie 修改
+### Cookie modify
 
-与 Header 修改方法一致
+Same as Header modification method
 
-如果指定 `remove` 为 `true` 还会同时对应的移除`set-cookie`项
+If `remove` is specified as `true`, the `set-cookie` item will also be removed correspondingly
 
-### Body修改
+### Body modify
 
-见 `TextModify` 部分
+See `TextModify` section

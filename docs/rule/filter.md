@@ -1,10 +1,10 @@
-# Filter 筛选器
+# Filter
 
-`Filter`用来筛选需要处理的请求和返回
+`Filter` Used to filter the requests that need to be processed and return
 
-## 候选项
+## candidate
 
-`Filter`目前包含以下类型：
+`Filter` Currently includes the following types：
 
 - All
 - Domain(String)
@@ -13,14 +13,14 @@
 - DomainSuffix(String)
 - UrlRegex(fancy_regex::Regex)
 
-> **注意**  
-> 当前版本中，`domain`相关类型匹配的是`host`，通常情况下不会影响结果  
-> 在网站使用非常规端口时，规则需要注明端口  
-> 后续版本将会对此行为进行优化  
+> **Note**  
+> In the current version, `domain` related types match `host`, which usually does not affect the result 
+> When a website uses an unconventional port, the rule needs to indicate the port  
+> This behavior will be optimized in future versions  
 
-### All 全部
+### All 
 
-指定筛选器为`all`时将会命中全部请求和返回，通常用来执行日志记录行为
+When the filter is specified as `all`, all requests and returns will be hit, usually used to perform logging behavior
 
 ```yaml
 - name: "log"
@@ -30,9 +30,9 @@
     - log-res
 ```
 
-### Domain 域名
+### Domain
 
-`domain`对域名进行全量匹配
+`domain` Full match on the domain name
 
 ```yaml
 - name: "redirect"
@@ -42,9 +42,9 @@
     redirect: "https://zu1k.com/"
 ```
 
-### DomainKeyword 域名关键词
+### DomainKeyword 
 
-`domain-keyword`对域名进行关键词匹配
+`domain-keyword`Keyword matching for domain names
 
 ```yaml
 - name: "reject CSDN"
@@ -53,9 +53,9 @@
   action: reject
 ```
 
-### DomainPrefix 域名前缀
+### DomainPrefix
 
-`domain-prefix`对域名进行前缀匹配
+`domain-prefix` Prefix matching on domain names
 
 ```yaml
 - name: "ad prefix"
@@ -64,9 +64,9 @@
   action: reject
 ```
 
-### DomainSuffix 域名后缀
+### DomainSuffix
 
-`domain-suffix`对域名进行后缀匹配
+`domain-suffix` Suffix matching on domain names
 
 
 ```yaml
@@ -77,21 +77,21 @@
     redirect: "https://google.com"
 ```
 
-### UrlRegex Url正则
+### UrlRegex 
 
-`url-regex`对整个url进行正则匹配
+`url-regex`Regular matching on the entire url
 
 ```yaml
-- name: "youtube追踪"
+- name: "youtube track"
   mitm: "*.youtube.com"
   filter:
     url-regex: '^https?:\/\/(www|s)\.youtube\.com\/(pagead|ptracking)'
   action: reject
 ```
 
-## 多个筛选器
+## Multiple Filters
 
-`filters`字段支持单个筛选器和多个筛选器，多个筛选器之间的关系为`或`
+`filters` field supports a single filter and multiple filters, and the relationship between multiple filters is `or`
 
 ```yaml
 - name: "youtube-2"
@@ -106,4 +106,4 @@
   action: reject
 ```
 
-具有相同动作的多个规则可聚合为一个规则以便于维护
+Multiple rules with the same action can be aggregated into a single rule for easy maintenance

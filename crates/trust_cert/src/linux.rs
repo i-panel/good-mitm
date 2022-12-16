@@ -34,19 +34,19 @@ pub fn install_cert(cert: Certificate) {
                 vec![],
             )
         } else {
-            ("good-mitm.pem", "", vec![])
+            ("video-mitm.pem", "", vec![])
         }
     };
 
     let cert = cert.serialize_pem().expect("serialize cert to pem format");
-    let system_trust_name = system_trust_filename.replace("{cert-name}", "good-mitm");
+    let system_trust_name = system_trust_filename.replace("{cert-name}", "video-mitm");
     fs::write(system_trust_name, cert).expect("write cert to system trust ca location");
 
     if trust_cmd.is_empty() {
         println!(
             "Installing to the system store is not yet supported on this Linux 😣 but Firefox and/or Chrome/Chromium will still work.",
         );
-        let cert_path = Path::new(&get_ca_root()).join("good-mitm.pem");
+        let cert_path = Path::new(&get_ca_root()).join("video-mitm.pem");
         println!(
             "You can also manually install the root certificate at {}.",
             cert_path.to_str().unwrap()
