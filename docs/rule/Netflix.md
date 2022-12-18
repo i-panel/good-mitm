@@ -53,7 +53,11 @@ bash <(curl -fsSL git.io/warp.sh) menu
 
 # Video-MITM
 project address：https://github.com/kontorol/good-mitm
-
+```shell
+wget https://github.com/kontorol/good-mitm/releases/download/0.4.1/video-mitm-0.4.0-x86_64-unknown-linux-gnu.tar.xz
+xz -d ./video-mitm-0.4.0-x86_64-unknown-linux-gnu.tar.xz
+tar -xvf ./video-mitm-0.4.0-x86_64-unknown-linux-gnu.tar
+```
 Generate self-signed CA private key and certificate
 ```shell
 ./video-mitm genca
