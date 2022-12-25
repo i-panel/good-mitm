@@ -1,0 +1,14 @@
+[Unit]
+Description=hiddify_monitroing
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/nohup /usr/bin/video-mitm run -r /opt/video-mitm/netflix.yaml
+Restart=on-failure
+StandardOutput=/opt/video-mitm/netflix.log
+StandardError=/opt/video-mitm/netflix.log
+
+[Install]
+WantedBy=multi-user.target
