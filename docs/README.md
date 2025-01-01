@@ -1,10 +1,10 @@
 # Good Man in the Middle
 
-[![GitHub stars](https://img.shields.io/github/stars/kontorol/good-mitm)](https://github.com/kontorol/good-mitm/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/kontorol/good-mitm)](https://github.com/kontorol/good-mitm/network)
-[![GitHub issues](https://img.shields.io/github/issues/kontorol/good-mitm)](https://github.com/kontorol/good-mitm/issues)
-[![Build](https://github.com/kontorol/good-mitm/actions/workflows/build-test.yml/badge.svg)](https://github.com/kontorol/good-mitm/actions/workflows/build-test.yml)
-[![GitHub license](https://img.shields.io/github/license/kontorol/good-mitm)](https://github.com/kontorol/good-mitm/blob/master/LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/i-panel/good-mitm)](https://github.com/i-panel/good-mitm/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/i-panel/good-mitm)](https://github.com/i-panel/good-mitm/network)
+[![GitHub issues](https://img.shields.io/github/issues/i-panel/good-mitm)](https://github.com/i-panel/good-mitm/issues)
+[![Build](https://github.com/i-panel/good-mitm/actions/workflows/build-test.yml/badge.svg)](https://github.com/i-panel/good-mitm/actions/workflows/build-test.yml)
+[![GitHub license](https://img.shields.io/github/license/i-panel/good-mitm)](https://github.com/i-panel/good-mitm/blob/master/LICENSE)
 
 Using MITM technology to provide `rewrite`、`redirect`、`reject` and other functions
 

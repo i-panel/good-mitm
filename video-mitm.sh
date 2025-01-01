@@ -74,7 +74,7 @@ before_show_menu() {
 }
 
 install() {
-    bash <(curl -Ls https://raw.githubusercontent.com/kontorol/good-mitm/main/install.sh)
+    bash <(curl -Ls https://raw.githubusercontent.com/i-panel/good-mitm/main/install.sh)
     if [[ $? == 0 ]]; then
         if [[ $# == 0 ]]; then
             start
@@ -98,7 +98,7 @@ update() {
 #        fi
 #        return 0
 #    fi
-    bash <(curl -Ls https://raw.githubusercontent.com/kontorol/good-mitm/main/install.sh) $version
+    bash <(curl -Ls https://raw.githubusercontent.com/i-panel/good-mitm/main/install.sh) $version
     if [[ $? == 0 ]]; then
         echo -e "${green}The update is complete and video-mitm has automatically restarted, please use video-mitm log to view the running log ${plain}"
         exit
@@ -260,7 +260,7 @@ install_bbr() {
 }
 
 update_shell() {
-    wget -O /usr/bin/video-mitm -N --no-check-certificate https://raw.githubusercontent.com/kontorol/good-mitm/main/video-mitm.sh
+    wget -O /usr/bin/video-mitm -N --no-check-certificate https://raw.githubusercontent.com/i-panel/good-mitm/main/video-mitm.sh
     if [[ $? != 0 ]]; then
         echo ""
         echo -e "${red}Failed to download the script, please check whether the machine can connect to Github${plain}"
@@ -378,7 +378,7 @@ show_usage() {
 show_menu() {
     echo -e "
   ${green}XrayR backend management script，${plain}${red}not applicabledocker${plain}
---- https://github.com/kontorol/good-mitm ---
+--- https://github.com/i-panel/good-mitm ---
   ${green}0.${plain} Change setting
 ————————————————
   ${green}1.${plain} Install video-mitm

@@ -112,7 +112,7 @@ install_Video-Mitm() {
     cd /usr/local/video-mitm/
 
     if [ $# == 0 ]; then
-        last_version=$(curl -Ls "https://api.github.com/repos/kontorol/good-mitm/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
+        last_version=$(curl -Ls "https://api.github.com/repos/i-panel/good-mitm/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
         if [[ ! -n "$last_version" ]]; then
             echo -e "${red}Failed to detect version, it may be beyond the Github API limit, please try again later, or manually specify the version to install${plain}"
             exit 1
@@ -132,7 +132,7 @@ install_Video-Mitm() {
     
     # Construct filename
     filename="video-mitm-${version_number}-${download_arch}.tar.xz"
-    download_url="https://github.com/kontorol/good-mitm/releases/download/${last_version}/${filename}"
+    download_url="https://github.com/i-panel/good-mitm/releases/download/${last_version}/${filename}"
     
     echo "Downloading from: ${download_url}"
     wget -q -N --no-check-certificate -O /usr/local/video-mitm/${filename} ${download_url}
@@ -149,9 +149,9 @@ install_Video-Mitm() {
     mkdir /etc/video-mitm/ -p
     rm /etc/systemd/system/video-mitm.service -f
     
-    wget -q -N --no-check-certificate -O /etc/systemd/system/video-mitm.service "https://github.com/kontorol/good-mitm/raw/main/video-mitm.service.template"
+    wget -q -N --no-check-certificate -O /etc/systemd/system/video-mitm.service "https://github.com/i-panel/good-mitm/raw/main/video-mitm.service.template"
     
-    wget -q -N --no-check-certificate -O /etc/video-mitm/config.yaml "https://raw.githubusercontent.com/kontorol/good-mitm/refs/heads/main/rules/netflix.yaml"
+    wget -q -N --no-check-certificate -O /etc/video-mitm/config.yaml "https://raw.githubusercontent.com/i-panel/good-mitm/refs/heads/main/rules/netflix.yaml"
     if [[ $? -ne 0 ]]; then
         echo -e "${red}Failed to download config, please make sure your server can access Github${plain}"
         exit 1
@@ -165,7 +165,7 @@ install_Video-Mitm() {
     if [[ ! -f /etc/video-mitm/config.yaml ]]; then
         cp config.yaml /etc/video-mitm/
         echo -e ""
-        echo -e "Fresh installation, please refer to the documentation first: https://github.com/kontorol/good-mitm"
+        echo -e "Fresh installation, please refer to the documentation first: https://github.com/i-panel/good-mitm"
     else
         systemctl start video-mitm
         sleep 2
@@ -178,7 +178,7 @@ install_Video-Mitm() {
         fi
     fi
 
-    curl -o /usr/bin/video-mitm -Ls https://raw.githubusercontent.com/kontorol/good-mitm/main/video-mitm.sh
+    curl -o /usr/bin/video-mitm -Ls https://raw.githubusercontent.com/i-panel/good-mitm/main/video-mitm.sh
     chmod +x /usr/bin/video-mitm
     ln -s /usr/bin/video-mitm /usr/bin/Video-Mitm # 小写兼容
     chmod +x /usr/bin/Video-Mitm

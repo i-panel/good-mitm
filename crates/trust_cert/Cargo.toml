@@ -3,8 +3,8 @@ name = "trust_cert"
 version = "0.0.5"
 edition = "2021"
 description = "Install certificate to your system trust zone."
-homepage = "https://github.com/kontorol/good-mitm"
-repository = "https://github.com/kontorol/good-mitm"
+homepage = "https://github.com/i-panel/good-mitm"
+repository = "https://github.com/i-panel/good-mitm"
 license = "MIT"
 
 [dependencies]
