@@ -1,14 +1,13 @@
 [Unit]
-Description=hiddify_monitroing
-After=network-online.target
-Wants=network-online.target
+Description=Video-Mitm
+After=network.target
+Wants=network.target
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/nohup /usr/bin/video-mitm run -r /opt/video-mitm/netflix.yaml
+WorkingDirectory=/usr/local/RouteDns/
+ExecStart=/usr/local/video-mitm/video-mitm /etc/video-mitm/config.yaml -b 0.0.0.0:34567
 Restart=on-failure
-StandardOutput=/opt/video-mitm/netflix.log
-StandardError=/opt/video-mitm/netflix.log
 
 [Install]
 WantedBy=multi-user.target
