@@ -6,7 +6,7 @@ Wants=network.target
 [Service]
 Type=simple
 WorkingDirectory=/usr/local/RouteDns/
-ExecStart=/usr/local/video-mitm/video-mitm /etc/video-mitm/config.yaml -b 0.0.0.0:34567
+ExecStart=/usr/local/video-mitm/video-mitm run -r /etc/video-mitm/config.yaml -b 0.0.0.0:34567
 Restart=on-failure
 
 [Install]
