@@ -207,4 +207,4 @@ install_Video-Mitm() {
 echo -e "${green}start installation${plain}"
 install_base
 # install_acme
-install_video-mitm $1
+install_Video-Mitm $1
